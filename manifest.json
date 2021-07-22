@@ -1,0 +1,24 @@
+
+{
+  "name": "chrome-extension-github",
+  "description": "githubのSTG,PRDのPRを作成するためのchrome extensionです",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "author": "nonoakij",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/compare/staging...develop",
+        "https://github.com/*/compare/master...staging"
+      ],
+      "js": [
+        "index.js"
+      ]
+    }
+  ]
+}
