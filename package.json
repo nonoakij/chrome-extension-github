@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --outfile=out.js",
+    "lint": "eslint src/index.js",
+    "format": "prettier --write src/index.js",
+    "prepare": "husky install",
+    "pre-commit": "npm run lint && npm run format"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.25"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.4",
+    "prettier": "2.5.1"
+  }
+}
