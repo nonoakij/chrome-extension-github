@@ -1,18 +1,20 @@
 {
   "scripts": {
-    "build": "esbuild src/index.js --bundle --minify --outfile=out.js",
-    "lint": "eslint src/index.js",
-    "format": "prettier --write src/index.js",
+    "build": "npm run type-check && esbuild src/index.ts --bundle --minify --outfile=out.js",
+    "lint": "eslint src/index.ts",
+    "format": "prettier --write src/index.ts",
     "prepare": "husky install",
-    "pre-commit": "npm run lint && npm run format"
-  },
-  "dependencies": {
-    "esbuild": "^0.14.25"
+    "pre-commit": "npm run type-check && npm run lint && npm run format",
+    "type-check": "tsc -noEmit"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "esbuild": "^0.14.25",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.4",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "typescript": "^4.6.2"
   }
 }
