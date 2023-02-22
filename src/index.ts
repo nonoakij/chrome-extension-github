@@ -23,22 +23,18 @@ if (comparePage) {
     "mr-md-0",
     "js-title-edit-button"
   );
-  selector =
-    "[data-test-selector=pr-timeline-commits-list] [data-hovercard-type=pull_request]";
+  selector = "a.issue-link.js-issue-link";
   target = ".timeline-comment-actions";
 }
 
 element.onclick = function () {
-  const text = [...new Array(document.querySelectorAll(selector))].reduce(
-    (p, c) => {
-      if (!(c instanceof HTMLAnchorElement)) {
-        return p;
-      }
-      const link = c.href.split("https://github.com/")[1];
-      return p.concat(`<li>${link}</li>`);
-    },
-    ""
-  );
+  const anchorElementList = document.querySelectorAll(selector);
+  const text = "";
+  anchorElementList.forEach((anchorElement) => {
+    if (!(anchorElement instanceof HTMLAnchorElement)) return;
+    const link = anchorElement.href.split("https://github.com/")[1];
+    return text.concat(`<li>${link}</li>`);
+  });
   window.navigator.clipboard.writeText(`<ul>${text}</ul>`).then(() => {
     alert("コピーしました");
   });
