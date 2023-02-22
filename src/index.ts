@@ -29,11 +29,11 @@ if (comparePage) {
 
 element.onclick = function () {
   const anchorElementList = document.querySelectorAll(selector);
-  const text = "";
+  let text = "";
   anchorElementList.forEach((anchorElement) => {
     if (!(anchorElement instanceof HTMLAnchorElement)) return;
     const link = anchorElement.href.split("https://github.com/")[1];
-    return text.concat(`<li>${link}</li>`);
+    text = text.concat(`<li>${link}</li>`);
   });
   window.navigator.clipboard.writeText(`<ul>${text}</ul>`).then(() => {
     alert("コピーしました");
