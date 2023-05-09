@@ -4,7 +4,7 @@
     "lint": "eslint src/index.ts",
     "format": "prettier --write src/index.ts",
     "prepare": "husky install",
-    "type-check": "tsc --noEmit --showConfig"
+    "type-check": "tsc"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.14.0",
