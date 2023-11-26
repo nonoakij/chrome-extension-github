@@ -1,13 +1,12 @@
-
 {
   "name": "chrome-extension-github",
   "description": "githubのマージコミットのリンクを取得しPRにペーストするためのchrome extensionです",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 3,
   "icons": {
-    "16": "assets/icon16.png",
-    "48": "assets/icon48.png",
-    "128": "assets/icon128.png"
+    "16": "assets/16x16.png",
+    "48": "assets/48x48.png",
+    "128": "assets/128x128.png"
   },
   "author": "nonoakij",
   "content_scripts": [
@@ -19,7 +18,7 @@
         "https://github.com/*/pull/*"
       ],
       "js": [
-        "out.js"
+        "dist/index.js"
       ]
     }
   ]

@@ -1,6 +1,6 @@
 const element = document.createElement("button");
 element.id = "chromeExtensionGithub-nonoakij";
-element.innerText = "マージコミットをコピーする";
+element.innerText = "Copy Marge commit";
 
 const comparePage = window.location.href.includes("/compare");
 
@@ -21,7 +21,7 @@ if (comparePage) {
     "float-none",
     "m-0",
     "mr-md-0",
-    "js-title-edit-button"
+    "js-title-edit-button",
   );
   selector = "code > a.issue-link.js-issue-link";
   target = ".timeline-comment-actions";
@@ -39,7 +39,7 @@ element.onclick = async function () {
   window.navigator.clipboard
     .writeText(`## Merge commits \n<ul>${text}</ul>`)
     .then(() => {
-      alert("コピーしました");
+      alert("Copied to clipboard");
     });
 };
 

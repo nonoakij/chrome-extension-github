@@ -1,19 +1,48 @@
 {
+  "name": "chrome-extension-github",
+  "main": "dist/index.js",
+  "description": "Chrome extension to save List of merge commits to Clipboard when creating a PR in Github",
+  "version": "1.0.3",
+  "keywords": [
+    "chrome",
+    "extension",
+    "github",
+    "clipboard"
+  ],
+  "homepage": "",
+  "bugs": {
+    "url": "https://github.com/nonoakij/chrome-extension-github/issues/"
+  },
+  "license": "MIT",
+  "author": "nonoakij",
+  "engines": {
+    "node": ">=21.2.0",
+    "npm": ">=10.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nonoakij/chrome-extension-github/"
+  },
+  "private": true,
   "scripts": {
-    "build": "npm run type-check && esbuild src/index.ts --bundle --minify --outfile=out.js",
+    "build": "tsc && esbuild src/index.ts --bundle --minify --outfile=dist/index.js",
     "lint": "eslint src/index.ts",
     "format": "prettier --write src/index.ts",
     "prepare": "husky install",
     "type-check": "tsc"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.14.0",
-    "@typescript-eslint/parser": "^5.14.0",
-    "esbuild": "^0.14.25",
-    "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.5.0",
-    "husky": "^7.0.4",
-    "prettier": "2.8.4",
-    "typescript": "4.9.5"
+    "@typescript-eslint/eslint-plugin": "6.12.0",
+    "@typescript-eslint/parser": "6.12.0",
+    "esbuild": "0.19.7",
+    "eslint": "8.54.0",
+    "eslint-config-prettier": "9.0.0",
+    "husky": "8.0.3",
+    "prettier": "3.1.0",
+    "typescript": "5.2.2"
+  },
+  "volta": {
+    "node": "21.2.0",
+    "npm": "10.2.4"
   }
 }
