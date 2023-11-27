@@ -1,7 +1,7 @@
 {
   "name": "chrome-extension-github",
   "description": "githubのマージコミットのリンクを取得しPRにペーストするためのchrome extensionです",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "manifest_version": 3,
   "icons": {
     "16": "assets/16x16.png",
