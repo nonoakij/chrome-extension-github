@@ -27,7 +27,7 @@
     "type-check": "tsc"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.3.14",
     "esbuild": "0.27.2",
     "husky": "9.1.7",
     "typescript": "5.9.3"
