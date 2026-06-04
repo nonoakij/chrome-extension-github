@@ -9,6 +9,7 @@
     "group:allNonMajor",
     ":assignAndReview(@nonoakij)",
     ":timezone(Asia/Tokyo)",
-    ":prHourlyLimitNone"
+    ":prHourlyLimitNone",
+    "customManagers:biomeVersions"
   ]
 }
