@@ -30,7 +30,7 @@
     "@biomejs/biome": "2.5.5",
     "esbuild": "0.28.0",
     "husky": "9.1.7",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "volta": {
     "node": "24.18.0"
