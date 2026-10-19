@@ -17,9 +17,7 @@
         "https://github.com/*/compare/main...staging",
         "https://github.com/*/pull/*"
       ],
-      "js": [
-        "dist/index.js"
-      ]
+      "js": ["dist/index.js"]
     }
   ]
 }
