@@ -176,7 +176,7 @@ importers:
   .:
     devDependencies:
       happy-dom:
-        specifier: ^21.0.4
+        specifier: 21.0.4
         version: 21.0.4
       node:
         specifier: runtime:24.22.0
