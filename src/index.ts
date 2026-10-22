@@ -1,3 +1,7 @@
+import { setupViewedReviewMode } from "./viewed-review-mode";
+
+setupViewedReviewMode();
+
 const element = document.createElement("button");
 element.id = "chromeExtensionGithub-nonoakij";
 element.innerText = "Copy Marge commit";
