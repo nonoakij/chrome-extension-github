@@ -21,13 +21,11 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
     "build": "vp lint && vp pack",
     "check": "vp check --fix",
     "prepare": "vp config --no-agent"
   },
   "devDependencies": {
-    "happy-dom": "^21.0.4",
     "vite-plus": "catalog:"
   },
   "devEngines": {
