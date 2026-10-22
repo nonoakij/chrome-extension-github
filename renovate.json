@@ -1,15 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": [
-    "dependencies",
-    "renovate"
-  ],
+  "labels": ["dependencies", "renovate"],
   "extends": [
     "config:best-practices",
     "group:allNonMajor",
     ":assignAndReview(@nonoakij)",
     ":timezone(Asia/Tokyo)",
-    ":prHourlyLimitNone",
-    "customManagers:biomeVersions"
+    ":prHourlyLimitNone"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["vite-plus", "@voidzero-dev/vite-plus-core"],
+      "groupName": "vite-plus"
+    }
   ]
 }
