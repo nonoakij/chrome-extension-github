@@ -1,5 +1,7 @@
+import { setupNegativeFileFilter } from "./negative-file-filter";
 import { setupViewedReviewMode } from "./viewed-review-mode";
 
+setupNegativeFileFilter();
 setupViewedReviewMode();
 
 const element = document.createElement("button");
