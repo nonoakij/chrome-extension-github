@@ -23,7 +23,8 @@
   "scripts": {
     "build": "vp lint && vp pack",
     "check": "vp check --fix",
-    "prepare": "vp config --no-agent"
+    "prepare": "vp config --no-agent",
+    "test": "node --test tests/*.test.mts"
   },
   "devDependencies": {
     "vite-plus": "catalog:"
